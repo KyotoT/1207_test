@@ -55,7 +55,7 @@ function showBox3() {
 // ボックスを消して、タイマーを終了
 function closeBox3() {
   document.getElementById("temporaryBox3").style.display = "none"; // ボックスを消す
-  clearTimeout( timerId2 ); // タイマーを終了
+  clearTimeout( timerId3 ); // タイマーを終了
   document.getElementById("btnShowBox3").disabled = false; // 表示用ボタンを有効化
 }
 
