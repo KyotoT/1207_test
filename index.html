@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>1207_terminal_test</title>
-  <link rel="stylesheet" href="css/prettify.css">
+  <!-- <link rel="stylesheet" href="css/prettify.css"> -->
   <link rel="stylesheet" href="css//style.css">
 </head>
 <body>
   <!-- Q1 -->
-  <section>
-    <h3>Q1)ログアウトしたい場合、ターミナルで何と入力すれば良いか</h3>
+  <!-- <section>
+    <h3>Q1) ログアウトしたい場合、ターミナルで何と入力すれば良いか</h3>
     <h4 id="temporaryBox" class="temporaryBox">
       <pre class="prettyprint lang-sql linenums" id="js-target">
         正解は、
@@ -234,11 +234,12 @@
     <p>
       <input type="button" value="答えを見る" id="btnShowBox" class="btn" onclick="showBox();" id="button">
     </p>
-  </section>
+  </section> -->
+
 
   <!-- Q2 -->
   <section>
-    <h3>Q2)一番上の階層（ルートディレクトリ）にいきたい場合、何と入力すれば良いか</h3>
+    <h3>Q2) 一番上の階層（ルートディレクトリ）にいきたい場合、何と入力すれば良いか</h3>
     <h4 id="temporaryBox2" class="temporaryBox">
       <pre class="prettyprint lang-sql linenums" id="js-target2">
         正解は、
@@ -258,7 +259,7 @@
 
   <!-- Q3 -->
   <section>
-    <h3>Q3)cドライブからeドライブに変更したい場合、何と入力すれば良いか</h3>
+    <h3>Q3) cドライブからeドライブに変更したい場合、何と入力すれば良いか</h3>
     <h4 id="temporaryBox3" class="temporaryBox">
       <pre class="prettyprint lang-sql linenums" id="js-target3">
         正解は、
@@ -266,9 +267,11 @@
 
 
 
-        /* 戻りたいとき */
-        cd /d c:\xampp\mysql\bin
+        オプション /d
+        ドライブを変更する
 
+        戻りたいとき
+        cd /d c:\xampp\mysql\bin
         c:\>
       </pre>
     </h4>
@@ -277,12 +280,471 @@
     </p>
   </section>
 
+  <!-- Q4 -->
+  <section>
+    <h3>Q4) テーブルの構造を確認したい場合、何と入力すれば良いか</h3>
+    <h4 id="temporaryBox4" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target4">
+        正解は、
+        desc テーブル名;
+
+
+
+        具体例
+        MariaDB [db1]> desc tb1;
+        +-------+-------------+------+-----+---------+-------+
+        | Field | Type        | Null | Key | Default | Extra |
+        +-------+-------------+------+-----+---------+-------+
+        | bang  | varchar(10) | YES  |     | NULL    |       |
+        | nama  | varchar(10) | YES  |     | NULL    |       |
+        | tosi  | int(11)     | YES  |     | NULL    |       |
+        +-------+-------------+------+-----+---------+-------+
+        3 rows in set (0.157 sec)
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox4" class="btn" onclick="showBox4();">
+    </p>
+  </section>
+
+  <!-- Q5 -->
+  <section>
+    <h3>Q5) テーブルの内容すべてを確認したい場合、<br>何と入力すれば良いか</h3>
+    <h4 id="temporaryBox5" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target5">
+        正解は、
+        select * from テーブル名;
+
+
+
+        具体例
+        MariaDB [db1]> select * from tb1;
+        +------+------+------+
+        | bang | nama | tosi |
+        +------+------+------+
+        | A101 | ç≤ì° |   40 |
+        +------+------+------+
+        1 row in set (0.000 sec)
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox5" class="btn" onclick="showBox5();">
+    </p>
+  </section>
+
+  <!-- Q6 -->
+  <section>
+    <h3>Q6) 今の階層から階層を一つ上がりたい場合、<br>何と入力すれば良いか</h3>
+    <h4 id="temporaryBox6" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target6">
+        正解は、
+        cd ..
+
+
+
+        具体例
+        c:\xampp\mysql\bin>cd ..
+        c:\xampp\mysql>
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox6" class="btn" onclick="showBox6();">
+    </p>
+  </section>
+
+  <!-- Q7 -->
+  <section>
+    <h3>Q7) データとは何か</h3>
+    <h4 id="temporaryBox7" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target7">
+        正解は、
+        データとは、客観的事実を数値・文字・図形・画像・音声などで表したもの
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox7" class="btn" onclick="showBox7();">
+    </p>
+  </section>
+
+  <!-- Q8 -->
+  <section>
+    <h3>Q8) 情報とは何か</h3>
+    <h4 id="temporaryBox8" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target8">
+        正解は、
+        情報とは、主観的事実
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox8" class="btn" onclick="showBox8();">
+    </p>
+  </section>
+
+  <!-- Q9 -->
+  <section>
+    <h3>Q9) データベースとは何か</h3>
+    <h4 id="temporaryBox9" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target9">
+        正解は、
+        特定のテーマに沿ったデータを集めて管理し、<br>容易に検索・抽出などの「再利用」をできるようにしたもの
+
+        つまり、データを入れておく箱
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox9" class="btn" onclick="showBox9();">
+    </p>
+  </section>
+
+  <!-- Q10 -->
+  <section>
+    <h3>Q10) DBMS(データベースマネジメントシステム)の種類を答えよ</h3>
+    <h4 id="temporaryBox10" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target10">
+        正解は、
+        MySQL、MariaDB、Oracle
+
+
+        DBMSは、データベースを便利に使うための機能が付いているソフトウェアのことだが、<br>単にデータベースのことだと思っていい
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox10" class="btn" onclick="showBox10();">
+    </p>
+  </section>
+
+  <!-- Q11 -->
+  <section>
+    <h3>Q11) 身近に使われているDBの種類を答えよ</h3>
+    <h4 id="temporaryBox11" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target11">
+        正解は、
+        コンビニのレジ打ちのデータ、新幹線予約システム、銀行ATM、美容院予約
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox11" class="btn" onclick="showBox11();">
+    </p>
+  </section>
+
+  <!-- Q12 -->
+  <section>
+    <h3>Q12) 複数人が互いに干渉せずにデータベース上で買い物や取引ができることを何というか</h3>
+    <h4 id="temporaryBox12" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target12">
+        正解は、
+        同時実行制御
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox12" class="btn" onclick="showBox12();">
+    </p>
+  </section>
+
+  <!-- Q13 -->
+  <section>
+    <h3>Q13) AさんがX銀行に10万円を振り込んだときに、10万円が矛盾なく振り込まれていることを何というか</h3>
+    <h4 id="temporaryBox13" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target13">
+        正解は、
+        トランザクション
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox13" class="btn" onclick="showBox13();">
+    </p>
+  </section>
+
+  <!-- Q14 -->
+  <section>
+    <h3>Q14) SQLは何の略か</h3>
+    <h4 id="temporaryBox14" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target14">
+        正解は、
+        Structured Query Language（対話機能）
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox14" class="btn" onclick="showBox14();">
+    </p>
+  </section>
+
+  <!-- Q15 -->
+  <section>
+    <h3>Q15) データベースを作成したい場合、<br>何と入力すれば良いか</h3>
+    <h4 id="temporaryBox15" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target15">
+        正解は、
+        create database データベース名;
+
+
+
+        具体例
+        MariaDB [(none)]> create database db1;
+        Query OK, 1 row affected (0.008 sec)
+
+        MariaDB [(none)]> show databases;
+        +--------------------+
+        | Database           |
+        +--------------------+
+        | db1                |
+        | db_wp              |
+        | information_schema |
+        | mysql              |
+        | performance_schema |
+        | phpmyadmin         |
+        | test               |
+        +--------------------+
+        7 rows in set (0.124 sec)
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox15" class="btn" onclick="showBox15();">
+    </p>
+  </section>
+
+  <!-- Q16 -->
+  <section>
+    <h3>Q16) データベースの一覧表示をしたい場合、<br>何と入力すれば良いか</h3>
+    <h4 id="temporaryBox16" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target16">
+        正解は、
+        show databases;
+
+
+
+        具体例
+        MariaDB [(none)]> show databases;
+        +--------------------+
+        | Database           |
+        +--------------------+
+        | db1                |
+        | db_wp              |
+        | information_schema |
+        | mysql              |
+        | performance_schema |
+        | phpmyadmin         |
+        | test               |
+        +--------------------+
+        7 rows in set (0.001 sec)
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox16" class="btn" onclick="showBox16();">
+    </p>
+  </section>
+
+  <!-- Q17 -->
+  <section>
+    <h3>Q17) データベースを削除したい場合、<br>何と入力すれば良いか</h3>
+    <h4 id="temporaryBox17" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target17">
+        正解は、
+        drop database データベース名;
+
+
+
+        具体例
+        MariaDB [(none)]> drop database db1;
+        Query OK, 0 rows affected (0.150 sec)
+
+        MariaDB [(none)]> show databases;
+        +--------------------+
+        | Database           |
+        +--------------------+
+        | db_wp              |
+        | information_schema |
+        | mysql              |
+        | performance_schema |
+        | phpmyadmin         |
+        | test               |
+        +--------------------+
+        6 rows in set (0.001 sec)
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox17" class="btn" onclick="showBox17();">
+    </p>
+  </section>
+
+  <!-- Q18 -->
+  <section>
+    <h3>Q18) データベースを指定したい場合、<br>何と入力すれば良いか</h3>
+    <h4 id="temporaryBox18" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target18">
+        正解は、
+        use データベース名;
+
+
+
+        具体例
+        MariaDB [(none)]> use db1;
+        Database changed
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox18" class="btn" onclick="showBox18();">
+    </p>
+  </section>
+
+  <!-- Q19 -->
+  <section>
+    <h3>Q19) 使用しているデータベースを確認したい場合、<br>何と入力すれば良いか</h3>
+    <h4 id="temporaryBox19" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target19">
+        正解は、
+        select データベース名;
+
+
+
+        具体例
+        MariaDB [db1]> select database();
+        +------------+
+        | database() |
+        +------------+
+        | db1        |
+        +------------+
+        1 row in set (0.000 sec)
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox19" class="btn" onclick="showBox19();">
+    </p>
+  </section>
+
+  <!-- Q20 -->
+  <section>
+    <h3>Q20) テーブルを作成したい場合、<br>何と入力すれば良いか</h3>
+    <h4 id="temporaryBox20" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target20">
+        正解は、
+        create table テーブル名（カラム名1 データ型1、カラム名2・・・）
+
+
+
+
+        具体例
+        create table tb1(bang varchar(10),nama varchar(10),tosi int);
+      （社員番号（10文字）、名前（10文字）、年齢（整数））
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox20" class="btn" onclick="showBox20();">
+    </p>
+  </section>
+
+  <!-- Q21 -->
+  <section>
+    <h3>Q21) descとは、何の略か</h3>
+    <h4 id="temporaryBox21" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target21">
+        正解は、
+        describe
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox21" class="btn" onclick="showBox21();">
+    </p>
+  </section>
+
+  <!-- Q22 -->
+  <section>
+    <h3>Q22) テーブルにデータを挿入したい場合、<br>
+      何と入力すれば良いか</h3>
+    <h4 id="temporaryBox22" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target22">
+        正解は、
+        insert into テーブル名 values('データ1','データ2',,,,,);
+
+
+
+
+        具体例
+        insert into tb1 values('A101','佐藤',40);
+        insert into tb1 values('A102','高橋',28);
+        insert into tb1 values('A103','中川',20);
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox22" class="btn" onclick="showBox22();">
+    </p>
+  </section>
+
+  <!-- Q23 -->
+  <section>
+    <h3>Q23) 自分のIPアドレスを調べたい場合、<br>
+      何と入力すれば良いか</h3>
+    <h4 id="temporaryBox23" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target23">
+        正解は、
+        ipconfig /all
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox23" class="btn" onclick="showBox23();">
+    </p>
+  </section>
+
+  <!-- Q24 -->
+  <section>
+    <h3>Q24) 自分のIPアドレスが機能しているか調べたい場合、<br>
+      何と入力すれば良いか</h3>
+    <h4 id="temporaryBox24" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target24">
+        正解は、
+        ping 192.168.1.11
+
+        例）	※「11」は自分の固有値
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox24" class="btn" onclick="showBox24();">
+    </p>
+  </section>
+
+  <!-- Q25 -->
+  <section>
+    <h3>Q25) Fドライブに移動して、MySQLを起動したい場合、<br>
+      何と入力すれば良いか</h3>
+    <h4 id="temporaryBox25" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target25">
+        正解は、
+        cd /d f:\xampp\mysql\bin
+
+        mysql -u root -p
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox25" class="btn" onclick="showBox25();">
+    </p>
+  </section>
+
+  <!-- Q26 -->
+  <section>
+    <h3>Q26) レコードを全削除したい場合、<br>
+      何と入力すれば良いか</h3>
+    <h4 id="temporaryBox26" class="temporaryBox">
+      <pre class="prettyprint lang-sql linenums" id="js-target26">
+        正解は、
+        delete from テーブル名;
+
+
+        具体例
+        MariaDB [db1]> delete from tb1h;
+        Query OK, 5 rows affected (0.096 sec)
+      </pre>
+    </h4>
+    <p>
+      <input type="button" value="答えを見る" id="btnShowBox26" class="btn" onclick="showBox26();">
+    </p>
+  </section>
+
     <!-- Javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
   <script src="js/lang-css.js"></script>
   <script src="js/prettify.js"></script>
-  <script src="js/t.min.js"></script>
+  <!-- <script src="js/t.min.js"></script> -->
   <script src="js/script.js"></script>
 </body>
 </html>
